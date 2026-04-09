@@ -45,6 +45,12 @@ const Processing = () => {
         }
       }, 800);
 
+      // CPU-Fallback Timeout Warning (HF models take 60-90s on CPU)
+      const cpuWarningTimeout = setTimeout(() => {
+        setStatusText("Heavy CPU execution in progress...");
+        setLogs(prev => [...prev, "[WARNING] Model executing on CPU. This may take up to 90 seconds."]);
+      }, 15000);
+
       try {
         const formData = new FormData();
         formData.append("file", file);
@@ -61,6 +67,7 @@ const Processing = () => {
           }
         });
 
+        clearTimeout(cpuWarningTimeout);
         clearInterval(progressInterval);
         setProgress(100);
         setStatusText("Analysis complete");
@@ -72,6 +79,7 @@ const Processing = () => {
         }, 1000);
 
       } catch (error) {
+        clearTimeout(cpuWarningTimeout);
         clearInterval(progressInterval);
         console.error("API Error", error);
         setLogs(prev => [...prev, `[ERROR] Analysis failed. Please try again.`]);
