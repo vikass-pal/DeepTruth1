@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { staggerChildren: 0.1 }
     }
@@ -19,14 +19,13 @@ const Home = () => {
   return (
     <div className="pb-20">
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
         className="relative px-4 pt-32 pb-20 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center overflow-hidden"
       >
-        
         <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent font-medium text-sm mb-8 border border-accent/20">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
@@ -60,7 +59,7 @@ const Home = () => {
       </motion.section>
 
       {/* Live Stats Widget */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
@@ -89,15 +88,15 @@ const Home = () => {
       <section className="py-10 border-y border-gray-100 dark:border-gray-800 bg-gray-50/50 dark:bg-[#0a0a0a]/50 flex flex-col items-center overflow-hidden">
         <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-6">Trusted by leading organizations</p>
         <div className="flex gap-12 sm:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-           {/* Placeholder SVG Logos */}
-           <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-50"><ShieldCheck className="w-8 h-8 text-gray-600 dark:text-gray-400" /> SecurVerify</div>
-           <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-900 dark:from-blue-300 dark:to-blue-50"><Cpu className="w-8 h-8 text-blue-600 dark:text-blue-400" /> NeuroAI</div>
-           <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-purple-900 dark:from-purple-300 dark:to-purple-50"><Lock className="w-8 h-8 text-purple-600 dark:text-purple-400" /> VaultTech</div>
+          {/* Placeholder SVG Logos */}
+          <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-gray-50"><ShieldCheck className="w-8 h-8 text-gray-600 dark:text-gray-400" /> SecurVerify</div>
+          <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-blue-900 dark:from-blue-300 dark:to-blue-50"><Cpu className="w-8 h-8 text-blue-600 dark:text-blue-400" /> NeuroAI</div>
+          <div className="flex items-center gap-2 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-700 to-purple-900 dark:from-purple-300 dark:to-purple-50"><Lock className="w-8 h-8 text-purple-600 dark:text-purple-400" /> VaultTech</div>
         </div>
       </section>
 
       {/* Features Section */}
-      <motion.section 
+      <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -149,7 +148,7 @@ const Home = () => {
       </motion.section>
 
       {/* Why Choose Us Section */}
-      <motion.section 
+      <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -158,7 +157,7 @@ const Home = () => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
-            
+
             <motion.div variants={itemVariants} className="flex-1 space-y-8">
               <span className="text-sm font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase">The DeepTruth Advantage</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white leading-tight">
@@ -167,7 +166,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 dark:text-gray-400">
                 While other platforms rely on single-method detection, our multi-modal approach cross-references visual artifacts with biological anomalies to eliminate false positives.
               </p>
-              
+
               <ul className="space-y-4">
                 {[
                   "No data retention - processing occurs purely in-memory",
@@ -181,7 +180,7 @@ const Home = () => {
                   </motion.li>
                 ))}
               </ul>
-              
+
               <motion.div variants={itemVariants} className="pt-4">
                 <Link to="/how-it-works" className="inline-flex items-center gap-2 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                   Explore our technical paper <ArrowRight className="w-5 h-5" />
@@ -217,13 +216,13 @@ const Home = () => {
                 </div>
               </div>
             </motion.div>
-            
+
           </div>
         </div>
       </motion.section>
 
       {/* Testimonial Section */}
-      <motion.section 
+      <motion.section
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
@@ -234,7 +233,7 @@ const Home = () => {
           <motion.div variants={itemVariants} className="mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">What Industry Leaders Say</h2>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {[
               {
@@ -266,7 +265,7 @@ const Home = () => {
       </motion.section>
 
       {/* CTA Section */}
-      <motion.section 
+      <motion.section
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -276,14 +275,14 @@ const Home = () => {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div variants={itemVariants} className="bg-gradient-to-br from-blue-600 to-purple-700 rounded-3xl p-10 sm:p-16 text-center shadow-premium relative overflow-hidden">
             <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-            
+
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 relative z-10">
               Ready to verify your media?
             </h2>
             <p className="text-blue-100 text-lg sm:text-xl max-w-2xl mx-auto mb-10 relative z-10">
               Join thousands of organizations using DeepTruth to protect their digital integrity.
             </p>
-            
+
             <Link to="/detect" className="relative z-10 inline-block">
               <button className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
                 Start Detection Free
